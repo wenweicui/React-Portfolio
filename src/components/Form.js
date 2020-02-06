@@ -54,7 +54,6 @@ export default class Form extends React.Component {
       email: '',
       message: '',
     })
-    alert(JSON.stringify('Reset', null, 2));
   }
 
   render() {
