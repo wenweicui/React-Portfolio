@@ -12,6 +12,7 @@ const tileData = [
     key:'item1',
     img: item1,
     class:"gridList-img",
+    link: "https://lulusmart.com/",
     title: 'LuluSmart React C2C Website & React Mobile App',
     detail: 'Developed a webapp platform to promote self-employed service provider’s business. Mainly responsible for the front-end development and technical feasibility of UI/UX designs using React JS and SCSS. Working with development team and managers for keeping site up-to-date and prioritizing needs, among other tasks.',
     cols: 2,
@@ -20,6 +21,7 @@ const tileData = [
     key:'item2',
     img: item2,
     class:"gridList-img-left",
+    link: "https://github.com/wenweicui/react-native-fifteen-puzzle",
     title: 'React Native Fifteen Puzzle Game',
     detail: 'Developed a React Native mobile game application for the Fifteen puzzle game using the React Native Game Engine Handbook library. Enabled the function for user to connect the game with Game Centre account to see the scoreboard ranking.',
     cols: 1,
@@ -28,6 +30,7 @@ const tileData = [
     key:'item3',
     img: item3,
     class:"gridList-img-left",
+    link: "https://github.com/wenweicui/react-native-gkesports",
     title: 'React Native Membership Card',
     detail: 'Developed a React Native mobile game application for the Fifteen puzzle game using the React Native Game Engine Handbook library. Enabled the function for user to connect the game with Game Centre account to see the scoreboard ranking.',
     cols: 1,
@@ -36,6 +39,7 @@ const tileData = [
     key:'item4',
     img: item4,
     class:"gridList-img",
+    link:"https://lulucheck.com/",
     title: 'LuluCheck Website & React Native App',
     detail: 'Developed a cross-platform client-side application for all property owners to check and document the conditions of their properties while away. Remain the same front-end duties while having more opportunities to work as a full-stack developer. Engineered dynamic components and created reusable code to facilitate future use.',
     cols: 2,
@@ -65,7 +69,10 @@ export default class Projects extends Component {
      this.setState({active: ''});
    }
 
-
+   onWindowOpen(link) {
+     window.open(link);
+     console.log(link)
+   }
   render() {
 
     return (
@@ -82,8 +89,11 @@ export default class Projects extends Component {
           			<div className="description">
           				<h1>{tile.title}</h1>
           				<p>{tile.detail}</p>
+                  <button onClick={() => this.onWindowOpen(tile.link)} type="button">Click For More Details</button>
           			</div>
-                <img src={tile.img} alt={tile.title} className="port-img"/>
+                <div className="port-img">
+                  <img src={tile.img} alt={tile.title}/>
+                </div>
               </div>
         		</div>
           ))}

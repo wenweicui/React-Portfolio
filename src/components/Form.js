@@ -35,15 +35,15 @@ export default class Form extends React.Component {
   }
 
   sendMessage (templateId, templateParams, userId) {
-	   emailjs.send('wenwei_cui_gmail', templateId, templateParams, userId)
+	   emailjs.sendForm('wenwei_cui_gmail', templateId, templateParams, userId)
      .then(res => {
       	console.log('Email successfully sent!')
         alert(JSON.stringify('Email successfully sent!', null, 2));
     	})
     	// Handle errors here however you like, or use a React error boundary
     	.catch(err => {
-        console.error('Oh well, you failed. Here some thoughts on the error that occured:', err)
-        alert(JSON.stringify('Oh well, you failed. Here some thoughts on the error that occured:', null, 2));
+        console.error('Oh well, something is wrong. Here some thoughts on the error that occured:', err)
+        alert(JSON.stringify('Oh no, something is wrong. Here some thoughts on the error that occured:', null, 2));
       })
       this.resetForm()
   }

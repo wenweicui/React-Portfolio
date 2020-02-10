@@ -271,12 +271,16 @@
     display: flex;
   }
   .port-img {
-    flex:1;
+    position: relative;
     max-width: 50%;
+    height: 100%;
+    padding-right: 30px;
+  }
+  .port-img img {
+    overflow: hidden;
     height: auto;
-    position: flex;
-    padding-right:40px;
-    margin: 0;
+    max-width:100%;
+    position: relative;
   }
   .port h1 {
     font-size: 35px;
@@ -299,9 +303,40 @@
     float: left;
     max-height: 100%;
     flex:1;
-    padding: 0 40px 40px;
+    padding: 0 20px 0 40px;
     overflow: auto;
     text-align: left;
+  }
+  .description button {
+    border: 1px solid #5d5d5d;
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  .description button:hover {
+    border: 1px solid #fdcb6e;
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #fdcb6e;
+  }
+  .description button:focus {
+    outline: none;
+    border: 1px solid #fdcb6e;
+    background-color: #fdcb6e;
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #fff;
   }
   .item-open {
     visibility: visible;
@@ -595,6 +630,7 @@
   }
   .contact-form-grid input{
     color: #5d5d5d;
+    font-family: lato;
     font-size: 16px;
     line-height: 26px;
     height: 35px;
@@ -611,6 +647,7 @@
   }
   .contact-form-grid textarea{
     color: #5d5d5d;
+    font-family: lato;
     font-size: 16px;
     line-height: 26px;
     height: 100px;
