@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useSpring, animated } from 'react-spring';
+import pdf from '../resume.pdf'
 
 const CollapseMenu = (props) => {
   const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
@@ -16,10 +17,11 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>link n1</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n2</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n3</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n4</a></li>
+          <li><AnchorLink href="#home" onClick={props.handleNavbar}>Home</AnchorLink></li>
+          <li><AnchorLink href="#project" onClick={props.handleNavbar}>Projects</AnchorLink></li>
+          <li><AnchorLink offset='-50' href="#about" onClick={props.handleNavbar}>About</AnchorLink></li>
+          <li><a href={pdf} onClick={props.handleNavbar}>Resume</a></li>
+          <li><AnchorLink offset='-50' href="#contact" onClick={props.handleNavbar}>Contact</AnchorLink></li>
         </NavLinks>
       </CollapseWrapper>
     );
@@ -30,16 +32,18 @@ const CollapseMenu = (props) => {
 export default CollapseMenu;
 
 const CollapseWrapper = styled(animated.div)`
+  z-index: 1000;
   background: #2d3436;
   position: fixed;
-  top: 4.5rem;
+  top: 4rem;
   left: 0;
   right: 0;
+
 `;
 
 const NavLinks = styled.ul`
   list-style-type: none;
-  padding: 2rem 1rem 2rem 2rem;
+  padding: 0;
 
   & li {
     transition: all 300ms linear 0s;

@@ -11,31 +11,31 @@ export default class Contact extends Component {
       <section id="contact" className="banner-background">
         <div className="container contact-container">
           <Grid container className="contact-block">
-            <Grid item xs={6} className="contact-grid">
+            <Grid item xs={12} sm={6} className="contact-grid">
               <div className="contact-header">
                 <h1>Drop me a line below</h1>
               </div>
               <Form/>
             </Grid>
-            <Grid item xs={6} className="contact-grid">
+            <Grid item xs={12} sm={6} className="contact-grid">
                 <div className="contact-header">
                   <h1>Feel free to contact me</h1>
                   <p>{data.contactScoial}</p>
                 </div>
-                <ul className="social">
+                <Grid container className="social">
                    {
                      data.socialLinks && data.socialLinks.map(item =>{
                        return(
-                               <li key={item.name} className='social-icon-list'>
+                               <Grid item xs={4} key={item.name} className='social-icon-list'>
                                  <a href={item.url} target="_blank" className='social-icon'>
                                    <i className={item.className}></i>
                                  </a>
-                               </li>
+                               </Grid>
                              )
                            }
                      )
                    }
-                </ul>
+                </Grid>
             </Grid>
           </Grid>
         </div>

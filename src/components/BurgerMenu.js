@@ -25,8 +25,8 @@ const Wrapper = styled.div`
     background: #fdcb6e;
     display: block;
     position: relative;
-    width: 3.5rem;
-    height: .4rem;
+    width: 2rem;
+    height: .1rem;
     margin-bottom: .7rem;
     transition: all ease-in-out 0.2s;
   }
@@ -37,12 +37,12 @@ const Wrapper = styled.div`
 
   .open span:nth-child(3) {
     transform: rotate(45deg);
-    top: -11px;
+    top: -15px;
   }
 
   .open span:nth-child(1) {
     transform: rotate(-45deg);
-    top: 11px;
+    top: 10px;
   }
 
 `;

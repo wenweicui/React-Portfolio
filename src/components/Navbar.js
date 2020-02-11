@@ -5,6 +5,7 @@ import pdf from '../resume.pdf'
 import Brand from "./Brand";
 import BurgerMenu from "./BurgerMenu";
 import CollapseMenu from "./CollapseMenu";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Navbar = (props) => {
 
@@ -25,11 +26,11 @@ const Navbar = (props) => {
         <FlexContainer>
           <Brand />
           <NavLinks style={linkAnimation}>
-            <a href="#home">Home</a>
-            <a href="#project">Projects</a>
-            <a href="#about">About</a>
+            <AnchorLink href="#home">Home</AnchorLink>
+            <AnchorLink href="#project">Projects</AnchorLink>
+            <AnchorLink offset='-50' href="#about">About</AnchorLink>
             <a href={pdf}>Resume</a>
-            <a href="#contact">Contact</a>
+            <AnchorLink offset='-50' href="#contact">Contact</AnchorLink>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
@@ -53,6 +54,7 @@ const NavBar = styled(animated.nav)`
   position: fixed;
   width: 100%;
   top: 0;
+  right: 0;
   left: 0;
   background: #2d3436;
   z-index: 1000;

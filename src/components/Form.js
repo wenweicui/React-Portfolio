@@ -94,7 +94,7 @@ export default class Form extends React.Component {
                 defaultValue={this.state.massage}
               />
             </Grid>
-            <Grid item xs={4} className="contact-form-grid">
+            <Grid item sm={4} xs={12} className="contact-form-grid">
               <button type="submit" onClick={this.handleSubmit}>Submit</button>
             </Grid>
           </Grid>

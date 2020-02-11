@@ -40,10 +40,32 @@ const timelineData = [
 ]
 
 export default class About extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { width: 0 };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth });
+    console.log('width', this.state.width);
+  }
+
   render() {
     let data = this.props.data;
 
     const TimelineItem = ({ data }) => (
+      <>{this.state.width >= 768 ?
         <div className="timeline-item">
             <div className="timeline-item-content">
                 <span className="tag" style={{ background: data.category.color }}>
@@ -55,6 +77,19 @@ export default class About extends Component {
                 <span className="circle" />
             </div>
         </div>
+        :
+        <div className="timeline-item-sm">
+            <div className="timeline-item-content">
+                <span className="tag" style={{ background: data.category.color }}>
+                    {data.category.tag}
+                </span>
+                <time>{data.date}</time>
+                <p>{data.header}</p>
+                <p>{data.text}</p>
+                <span className="circle" />
+            </div>
+        </div>
+      }</>
     );
 
     const Timeline = () =>
