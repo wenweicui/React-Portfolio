@@ -8,7 +8,7 @@ export default class Contact extends Component {
     let data = this.props.data;
 
     return (
-      <section id="contact" className="banner-background">
+      <section id="contact" className="banner-background contact-wrap">
         <div className="container contact-container">
           <Grid container className="contact-block">
             <Grid item xs={12} sm={6} className="contact-grid">
@@ -39,7 +39,7 @@ export default class Contact extends Component {
             </Grid>
           </Grid>
         </div>
-        <footer>
+        <footer className="contact-footer">
           <p style={{color:'#fff'}}>Photo by Alessio Lin on Unsplash</p>
           <p style={{color:'#fff'}}>2019© Copyright Wenwei Cui (William). All rights reserved.</p>
         </footer>
