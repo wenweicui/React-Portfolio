@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import avatar from '../avatar.png';
 const timelineData = [
     {
         header: 'Algonquin College',
@@ -31,7 +31,7 @@ const timelineData = [
     {
         header: 'Scotiabank',
         text: 'Universal Banker',
-        date: 'Nov 2018 - Present',
+        date: 'Nov 2018 - Mar 2020',
         category: {
           tag: 'Part-time Job',
           color: '#2abb9b'
@@ -68,7 +68,7 @@ export default class About extends Component {
       <>{this.state.width >= 768 ?
         <div className="timeline-item">
             <div className="timeline-item-content">
-                <span className="tag" style={{ background: data.category.color }}>
+                <span className="tag" style={{borderRadius:5, background: data.category.color }}>
                     {data.category.tag}
                 </span>
                 <time>{data.date}</time>
@@ -80,7 +80,7 @@ export default class About extends Component {
         :
         <div className="timeline-item-sm">
             <div className="timeline-item-content">
-                <span className="tag" style={{ background: data.category.color }}>
+                <span className="tag" style={{borderRadius:5, background: data.category.color }}>
                     {data.category.tag}
                 </span>
                 <time>{data.date}</time>
@@ -105,8 +105,13 @@ export default class About extends Component {
       <div id="about" className="container">
         <section className="about-container">
           <div className="about-header">
-            <h1>Little bit about William</h1>
-            <p>{data.aboutme}</p>
+            <div className="about-block">
+              <img className="about-avatar" src={avatar}/>
+              <div className="about-txt">
+                <h1 style={{textAlign:'right'}}>Little bit about William</h1>
+                <p style={{textAlign:'justify'}}>{data.aboutme}</p>
+              </div>
+            </div>
           </div>
           <div className="timeline">
             <h1>Timeline</h1>

@@ -21,7 +21,7 @@ let data = {
         },
       ],
     "contactScoial":"Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you. Simply fill the from and send me an email.",
-    "aboutme":"Goal-oriented and detail-oriented Front-End Developer with 2 years working experience with React and React Native. Possesses a track record of developing a responsive single-page customer-to-customer (C2C) website, two hybrid mobile apps, and a few freelance web/mobile applications. Armed with Graphic Design skills to create dynamic, professional, user-friendly websites, mobile apps and platforms.",
+    "aboutme":"Goal-oriented and detail-oriented Software Developer with 2 years working experience with React JS, React Native and REST API. Possesses a track record of developing a responsive single-page customer-to-customer (C2C) website, two hybrid mobile apps, and a few freelance web/mobile applications. Armed with proficient knowledge in Statistics, Mathematics and Data Analytic to drive successful business solutions and Graphic Design skills to create dynamic, professional, user-friendly websites, mobile apps and platforms.",
     "address":"Based in Ottawa / Ontario / Canada",
     "oldAddress":"Born in Hangzhou / Zhejiang / China",
     "website":"https://wenweicui.github.io",

@@ -6,8 +6,18 @@ import item1 from '../item1.png';
 import item2 from '../item2.png';
 import item3 from '../item3.png';
 import item4 from '../item4.png';
+import item0 from '../item0.png';
 
 const tileData = [
+  {
+    key:'item0',
+    img: item0,
+    class:"gridList-img",
+    link:"https://wenweicui.github.io/react-covid-19/",
+    title: 'React COVID-19 Dashboard',
+    detail: 'Developed a global trend dashboard for COVID-19 pandemic with heated map and intractive data graph using React JS based on covid19.mathdro.id API.',
+    cols: 3,
+  },
   {
     key:'item1',
     img: item1,
@@ -44,7 +54,6 @@ const tileData = [
     detail: 'Developed a cross-platform client-side application for all property owners to check and document the conditions of their properties while away. Remain the same front-end duties while having more opportunities to work as a full-stack developer. Engineered dynamic components and created reusable code to facilitate future use.',
     cols: 2,
   },
-
 ];
 
 export default class Projects extends Component {
