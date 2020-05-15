@@ -7,8 +7,18 @@ import item2 from '../item2.png';
 import item3 from '../item3.png';
 import item4 from '../item4.png';
 import item0 from '../item0.png';
+import item5 from '../item5.png';
 
 const tileData = [
+  {
+    key:'item5',
+    img: item5,
+    class:"gridList-img",
+    link:"https://www.figma.com/proto/BD3L8Q6j9HyxgaQYnst7ws/Home?node-id=7%3A782&viewport=117%2C78%2C0.11565202474594116&scaling=scale-down",
+    title: 'Property Management Mobile App Mock Up',
+    detail: 'Designed a new property management mobile app based on the previous released app Lulucheck, enhanced cards view and report dashboard for a better user experience.',
+    cols: 1,
+  },
   {
     key:'item0',
     img: item0,
@@ -16,7 +26,7 @@ const tileData = [
     link:"https://wenweicui.github.io/react-covid-19/",
     title: 'React COVID-19 Dashboard',
     detail: 'Developed a global trend dashboard for COVID-19 pandemic with heated map and intractive data graph using React JS based on covid19.mathdro.id API.',
-    cols: 3,
+    cols: 2,
   },
   {
     key:'item1',
